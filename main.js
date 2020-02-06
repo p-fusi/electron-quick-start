@@ -2,6 +2,8 @@
 const {app, BrowserWindow, Notification} = require('electron')
 const path = require('path')
 
+app.setAppUserModelId('com.myapp.id');
+
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
