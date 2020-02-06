@@ -1,5 +1,0 @@
-directories:
-  output: dist
-  buildResources: build
-appId: com.myapp.id
-electronVersion: 8.0.0
