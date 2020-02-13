@@ -17,7 +17,7 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
-  new Notification({title: 'hi there!', timeoutType: 'never'}).show()
+  // new Notification({title: 'hi there!', timeoutType: 'never'}).show()
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

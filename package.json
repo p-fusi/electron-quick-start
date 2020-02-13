@@ -9,7 +9,7 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --linux"
+    "dist": "electron-builder --windows --linux"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
