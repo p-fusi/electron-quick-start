@@ -17,15 +17,13 @@ function createWindow () {
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
-
-  const newNotification = new Notification({title: 'I am a main process Notification!', timeoutType: 'naever'})
+  
+  const newNotification = new Notification({title: 'I am a main process Notification!', timeoutType: 'never'})
   newNotification.show()
-newNotification.on('show', function (e) {
-  console.log('on show')
-})
-newNotification.on('click', function (e) {
-  console.log('on show')
-})
+  newNotification.on('click', function () {
+    console.log('main process notification onclick');
+  })
+
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
