@@ -5,9 +5,9 @@
 // selectively enable features needed in the rendering
 // process.
 
-let newNotification = new Notification("Ciao!", {
-  body: "Come va?"
+let newNotification = new Notification("I am a renderer process notification!", {
+  requireInteraction: true
 });
-newNotification.onclick = () => {
+newNotification.onclick = e => {
     console.log('html5 notification onclick');
 }

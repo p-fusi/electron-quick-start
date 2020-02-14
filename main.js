@@ -2,9 +2,10 @@
 const {app, BrowserWindow, Notification} = require('electron')
 const path = require('path')
 
-app.setAppUserModelId('com.myapp.id');
-
 function createWindow () {
+
+  app.setAppUserModelId('com.myapp.id');
+
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 800,
@@ -17,8 +18,14 @@ function createWindow () {
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
-  // new Notification({title: 'hi there!', timeoutType: 'never'}).show()
-
+  const newNotification = new Notification({title: 'I am a main process Notification!', timeoutType: 'naever'})
+  newNotification.show()
+newNotification.on('show', function (e) {
+  console.log('on show')
+})
+newNotification.on('click', function (e) {
+  console.log('on show')
+})
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
 }
