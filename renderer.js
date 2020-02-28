@@ -6,7 +6,8 @@
 // process.
 
 let newNotification = new Notification("Ciao!", {
-  body: "Come va?"
+  body: "Come va?",
+  requireInteraction: true
 });
 newNotification.onclick = () => {
     console.log('html5 notification onclick');
